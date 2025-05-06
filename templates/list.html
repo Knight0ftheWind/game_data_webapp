@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    
+    {% if games|length > 0 %}
+
+        <table>
+            <caption>Games</caption>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Release Date</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in games %}
+
+                    <tr>
+                        <th scope="row">{{ game.id }}</th>
+                        <td>{{ game.title }}</td>
+                        <td>{{ game.genre }}</td>
+                        <td>{{ game.release_date }}</td>
+                        <td>
+                            <form action="/delete" method="post">
+                                <input name="id" type="hidden" value="{{ game.id }}">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% endif %}
+    <div>
+        <a href="http://localhost:5000/form">
+            <button>Add Game</button>
+        </a>
+    </div>
+    
+
+{% endblock %}

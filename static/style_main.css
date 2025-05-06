@@ -1,0 +1,41 @@
+body {padding-left: 20px;}
+
+h2 {
+    font-family: Algerian;
+}
+
+td {
+    padding-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    font-family: Algerian;
+    font-size: large;
+    size: 20 px;
+}
+
+table, th, td {
+    border-style: inset;
+}
+
+div {
+    padding-top: 15px;
+}
+
+input, select {
+    padding-left: 5px;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.default {
+    color: gray;
+}
+
+caption {
+    margin: auto;
+    font-family: Algerian;
+    font-size: 30px;
+}
